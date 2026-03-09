@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formacio Web BCN</title>
+</head>
+<body>
+    <script>
+        function validarForm()
+        {
+            let valid = true;
+            const radioSeleccionat =
+            document.querySelector('input[name="mod"]:checked');
+            let err = document.getElementById("Modal")
+            let msg = document.getElementById("modError")
+            if (!radioSeleccionat) {
+                err.style="border:solid 1px red; width:300px; color:red;"
+                msg.textContent = "Modalitat no seleccionada"
+                valid = false
+            }
+            else
+            {    
+                err.style="border:none; width:300px; color:black;"
+                msg.textContent = ""
+                let err3 = document.getElementById("Type")
+                let msg3 = document.getElementById("tipusError")
+                if (radioSeleccionat.value=="Online")
+                {
+                    let tipus = document.getElementById("tipus").value
+                    if (tipus === '')
+                    {
+
+                        err3.style="border:solid 1px red; width:300px; color:red;"
+                        msg3.textContent = "Tipus no seleccionat"
+                        valid = false
+                    }
+                    else{
+                        let patro = /^\w+#[0-9]{4}$/
+                        if (!patro.test(tipus))
+                        {
+                        err3.style="border:solid 1px red; width:300px; color:red;"
+                        msg3.textContent = "Tipus no vàlid"
+                        valid = false
+                        }
+                        else
+                        {
+                            err3.style="border:none; width:300px; color:black;"
+                            msg3.textContent = ""
+                        }
+                    }
+                }
+                else if (radioSeleccionat.value="Presencial")
+                {
+                    let tipus = document.getElementById("tipus")
+                    tipus.value = ""
+                    err3.style="border:none; width:300px; color:black;"
+                    msg3.textContent = ""
+                }
+        }
+            let mate = document.querySelectorAll('input[name="mate"]:checked');
+            let err2 = document.getElementById("Materials")
+            let msg2 = document.getElementById("matError")
+            if (mate.length === 0) {
+                
+                err2.style="border:solid 1px red; width:300px; color:red;"
+                msg2.textContent = "Materials no escollits"
+                valid = false
+            }
+            else
+            {
+                err2.style="border:none; width:300px; color:black;"
+                msg2.textContent = ""
+            }
+
+            let pais = document.getElementById("pais").value
+            let err4 = document.getElementById("deenei")
+            let msg4 = document.getElementById("dniError")
+            let err5 = document.getElementById("Passaport")
+            let msg5 = document.getElementById("passError")
+            let dni = document.getElementById("dni")
+            let pass = document.getElementById("passp")
+            if (pais=='Espanya')
+            {
+                err5.style="border:none; width:300px; color:black;"
+                msg5.textContent = ""
+                pass.value=''
+                if (dni.value==='')
+                {
+                    err4.style="border:solid 1px red; width:300px; color:red;"
+                    msg4.textContent = "DNI obligatori"
+                    valid = false
+                }
+                else
+                {
+                    let patro2 = /[0-9]{8}[A-Z]$/
+                    if (!patro2.test(dni.value))
+                    {
+                        err4.style="border:solid 1px red; width:300px; color:red;"
+                        msg4.textContent = "DNI no vàlid" 
+                        valid = false
+                    }
+                    else
+                    {
+                        err4.style="border:none; width:300px; color:black;"
+                        msg4.textContent = "" 
+                    }
+                }
+            }
+            else if (pais=='Altres')
+            {
+                err4.style="border:none; width:300px; color:black;"
+                msg4.textContent = "" 
+                dni.value =''
+                if (pass.value=='')
+                {
+                    err5.style="border:solid 1px red; width:300px; color:red;"
+                    msg5.textContent = "Passaport obligatori"
+                    valid = false
+                }
+                else
+                {
+                    let patro3 = /[A-Z][0-9]{6,12}$/
+                    if (!patro3.test(pass.value))
+                    {
+                        err5.style="border:solid 1px red; width:300px; color:red;"
+                        msg5.textContent = "Passaport no vàlid" 
+                        valid = false
+                    }
+                    else
+                    {
+                        err5.style="border:none; width:300px; color:black;"
+                        msg5.textContent = ""
+                    }
+                }
+            }
+            //El color no es pot validar amb HTML5 aixi que utilitzare JS
+            let color = document.getElementById("color").value
+            let err6 = document.getElementById("Culoh")
+            let msg6 = document.getElementById("colorError")
+            if (color=='#000000')
+            {
+                err6.style="border:solid 1px red; width:300px; color:red;"
+                msg6.textContent = "Color no seleccionat. Si t'agrada el negre, selecciona un altre negre" 
+                valid = false
+            }
+            else
+            {
+                err6.style="border:none; width:300px; color:black;"
+                msg6.textContent = ""   
+            }
+            let msgf=document.getElementById("validMsg")
+            if (valid)
+            {
+                
+                msgf.style="background:lightgreen; width:300px; color:green;"
+                msgf.textContent ="Inscripció correcta"
+                document.getElementById("myForm").reset()
+            }
+            else
+            {
+                msgf.style="none;"
+                msgf.textContent =""
+            }
+            return false
+        }
+    </script>
+    <form id="myForm" onsubmit="return validarForm()">
+        <label for="name"><b>Nom i cognoms:*</b></label><br>
+        <input id="name" name="name" type="text" required><br><br>
+        <label for="email"><b>Correu electronic:*</b></label><br>
+        <input id="email" name="email" type="email" required><br><br>
+        <label for="edat"><b>Edat*</b></label><br>
+        <input id="edat" name="edat" type="number" min="16" max="65" required><br><br>
+        <!-- Color no es pot verificar amb HTML5-->
+        <div id ="Culoh">
+            <label for="color"><b>Color Preferit:*</b></label><br>
+            <input id="color" name="color" type="color" required>
+            <p id="colorError"></p>
+        </div><label for="torn"><b>Torn:*</b></label><br>
+        <select id="torn" name="torn" required>
+            <option value="">--Selecciona el teu Torn</option>
+            <option value="Matí">Matí</option>
+            <option value="Tarda">Tarda</option>
+        </select><br><br>
+        <div id="Modal">
+            <label for="mod"><b>Modalitat:</b>*</label><br>
+            Presencial<input type="radio" id="mod" name="mod" value="Presen">
+            Online<input type="radio" id="mod" name="mod" value="Online">
+            <p id="modError"></p>
+        </div>
+        <div id="Type">
+            <label for="tipus">Tipus:</label><br>
+            <input type="text" id="tipus" name="tipus">
+            <p id="tipusError"></p>
+        </div>
+        <label for="tele"><b>Telèfon:</b>*</label><br>
+        <input type="tel" name="tele" id="tele" pattern="[0-9]{9,12}" required>
+        <br><br>
+        <div id="Materials">
+            <label for="mate"><b>Materials:</b>*</label><br><br>
+            Portàtil<input type="checkbox" id="mate" name="mate" value="port">
+            Llibreta<input type="checkbox" id="mate" name="mate" value="llib">
+            Auriculars<input type="checkbox" id="mate" name="mate" value="auri">
+            <p id="matError"></p>
+        </div>
+        <label for="pais">País</label><br>
+        <select id="pais" name="pais">
+            <option value="Espanya">España</option>
+            <option value="Altres">Altres</option>
+        </select>
+        <p id="paisError"></p>
+        <div id="deenei">
+            <label for="dni">DNI:</label><br>
+            <input type="text" id="dni" name="dni">
+            <p id="dniError"></p>
+        </div>
+        <div id="Passaport">
+            <label for="passp">Passaport:</label><br>
+            <input type="text" id="passp" name="passp">
+            <p id="passError"></p>
+        </div>
+        <label for="check"><b>Acepto tots els termes y condicions:</b>*</label>
+        <input type="checkbox" id="check" name="check" value="OK" required><br><br>
+        <input type="submit" value="Enviar">
+        <p id="validMsg"></p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend><h1>Dades personals</h1></legend>
+            <label for="name"><b>Nom:</b>*</label>
+            <input id="name" name="name" required></input><br><br>
+            <label for="cogn"><b>Cognoms:</b>*</label>
+            <input id="cogn" name="cogn" required></input><br><br>
+            <label for="dnaix"><b>Data Naixement:</b>*</label>
+            <input type="date" id="dnaix" name="dmaix" required></input><br><br>
+            <label for="codi"><b>Codi d'alumne:</b>*</label>
+            <input id="codi" name="codi" pattern="ALU-[0-9]{4}"required></input><br><br>
+            <label for="motiu"><b>Motiu per apuntar-te:</b>*</label>
+            <textarea id="motiu" name="motiu" minlength="10" maxlength="200" required></textarea><br><br>
+        </fieldset>
+        <fieldset>
+        <legend><h1>Activitat</h1></legend>
+        <label for="curs"><b>Curs:</b>*</label></br>
+        <select id="curs" name="curs" required>
+            <option value="">--Selecciona el teu curs--</option>
+            <option value="1">1r ESO</option>
+            <option value="2">2n ESO</option>
+            <option value="3">3r ESO</option>
+            <option value="4">4t ESO</option>
+        </select><br><br>
+        <label for="act"><b>Activitat:</b>*</label><br>
+        Futbol<input type="radio" id="act" name="act" value="fut"  required>
+        Bàsquet<input type="radio" id="act" name="act" value="bas" required>
+        Robòtica<input type="radio" id="act" name="act" value="rob" required>
+        Teatre<input type="radio" id="act" name="act" value="tea" required><br><br>
+        </fieldset>
+        <fieldset>
+        <legend><h1>Preferencies</h1></legend>
+        <label for="disp"><b>Disponibilitat:</b>*</label><br><br>
+        Dilluns<input type="checkbox" id="disp" name="disp" value="dll" checked>
+        Dimarts<input type="checkbox" id="disp" name="disp" value="dim">
+        Dimecres<input type="checkbox" id="disp" name="disp" value="dix"><br><br>
+        <label for="check"><b>Acepto tots els termes y condicions:</b>*</label>
+        <input type="checkbox" id="check" name="check" value="OK" required>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Esborrar">
+    </form>
+</body>
+</html>

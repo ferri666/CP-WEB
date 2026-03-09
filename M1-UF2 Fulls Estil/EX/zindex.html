@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .quadrat{
+            width:100px;
+            height:100px;
+            position:absolute;
+            color:white;
+            padding:9px;
+            justify-content: center;
+            align-items: end;
+            display: flex;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #verd{
+            background-color: green;
+            z-index: 4;
+            left:200px;
+        }
+        #taronja{
+            background-color: orange;
+            z-index: 3;
+            top:50px;
+            left:150px;
+        }
+        #blau{
+            background-color: blue;
+            z-index: 1;
+            top:150px;
+            left:50px;
+        }
+        #vermell{
+            background-color: red;
+            z-index: 2;
+            top:100px;
+            left:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="verd" class="quadrat">z-index: 4</div>
+    <div id="vermell" class="quadrat">z-index: 2</div>
+    <div id="blau" class="quadrat">z-index: 1</div>
+    <div id="taronja" class="quadrat">z-index: 3</div>
+</body>
+</html>

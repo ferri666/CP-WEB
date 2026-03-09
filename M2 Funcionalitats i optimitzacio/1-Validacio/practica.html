@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validarForm()
+        {
+            let name = document.getElementById("name").value
+            let err = document.getElementById("errorField")
+
+            if (name === '')
+            {
+                err.style="color:red;"
+                err.textContent = "Nom incomplet"
+                return false
+            }
+            let cogn = document.getElementById("cogn").value
+            if (cogn === '')
+            {
+                err.style="color:red;"
+                err.textContent = "Cognom incomplet"
+                return false
+            }
+
+            let dnaix = document.getElementById("dnaix").value
+
+            if(dnaix === '')
+            {
+                err.style="color:red;"
+                err.textContent = "Data no assignada"
+                return false
+            }
+            const data = new Date(dnaix)
+            const now = new Date()
+            const any1 = data.getFullYear()
+            const any2 = now.getFullYear()
+            const mes1 = data.getMonth()
+            const mes2 = now.getMonth()
+            const dia1 = data.getDate()
+            const dia2 = now.getDate()
+            
+            let edat = any2 - any1
+            if (mes1>mes2)
+                edat -=1
+            if (mes1==mes2 && dia1>dia2)
+                edat-=1
+            if (edat<14 || edat>16)
+            {
+                err.style="color:red;"
+                err.textContent = "Edat no vàlida"
+                return false
+            }
+            let codi = document.getElementById("codi").value
+            let patro = /^ALU-[0-9]{4}$/
+            if (!patro.test(codi))
+            {
+                err.style="color:red;"
+                err.textContent = "Codi incorrecte"
+                return false
+            }
+            let motiu = document.getElementById("motiu").value
+            if (motiu.length<10)
+            {
+                err.style="color:red;"
+                err.textContent = "Motiu massa curt"
+                return false
+            }
+            if (motiu.length>200)
+            {
+                err.style="color:red;"
+                err.textContent = "Motiu massa llarg"
+                return false
+            }
+            let curs = document.getElementById("curs").value
+            if (curs==='--Selecciona el teu curs--')
+            {
+                err.style="color:red;"
+                err.textContent = "Curs no seleccionat"
+                return false
+            }
+            const radioSeleccionat =
+            document.querySelector('input[name="act"]:checked');
+            if (!radioSeleccionat) {
+                err.style="color:red;"
+                err.textContent = "Activitat no escollida"
+                return false
+            }
+            
+            let disp = document.querySelectorAll('input[name="disp"]:checked');
+
+            if (disp.length === 0) {
+                err.style="color:red;"
+                err.textContent = "Disponibilitat no escollida"
+                return false
+            }
+            let check = document.querySelectorAll('input[name="check"]:checked');
+            if (check.length ===0)
+            {
+                err.style="color:red;"
+                err.textContent = "Heu d'acceptar tots els termes y condicions"
+                return false
+            }
+            err.style="color:green;"
+            err.textContent="Inscripcció enviada. Activitat: "+ act +". Gràcies "+ name
+            return false;
+        }
+    </script>
+</head>
+<body>
+    
+    <form onsubmit="return validarForm()">
+        <fieldset>
+            <legend><h1>Dades personals</h1></legend>
+            <label for="name"><b>Nom:</b>*</label>
+            <input id="name" name="name"></input><br><br>
+            <label for="cogn"><b>Cognoms:</b>*</label>
+            <input id="cogn" name="cogn"></input><br><br>
+            <label for="dnaix"><b>Data Naixement:</b>*</label>
+            <input type="date" id="dnaix" name="dmaix"></input><br><br>
+            <label for="codi"><b>Codi d'alumne:</b>*</label>
+            <input id="codi" name="codi"></input><br><br>
+            <label for="motiu"><b>Motiu per apuntar-te:</b>*</label>
+            <textarea id="motiu" name="motiu"></textarea><br><br>
+        </fieldset>
+        <fieldset>
+        <legend><h1>Activitat</h1></legend>
+        <label for="curs"><b>Curs:</b>*</label></br>
+        <select id="curs" name="curs">
+            <option>--Selecciona el teu curs--</option>
+            <option value="1">1r ESO</option>
+            <option value="2">2n ESO</option>
+            <option value="3">3r ESO</option>
+            <option value="4">4t ESO</option>
+        </select><br><br>
+        <label for="act"><b>Activitat:</b>*</label><br>
+        Futbol<input type="radio" id="act" name="act" value="fut">
+        Bàsquet<input type="radio" id="act" name="act" value="bas">
+        Robòtica<input type="radio" id="act" name="act" value="rob">
+        Teatre<input type="radio" id="act" name="act" value="tea"><br><br>
+        </fieldset>
+        <fieldset>
+        <legend><h1>Preferencies</h1></legend>
+        <label for="disp"><b>Disponibilitat:</b>*</label><br><br>
+        Dilluns<input type="checkbox" id="disp" name="disp" value="dll">
+        Dimarts<input type="checkbox" id="disp" name="disp" value="dim">
+        Dimecres<input type="checkbox" id="disp" name="disp" value="dix"><br><br>
+        <label for="check"><b>Acepto tots els termes y condicions:</b>*</label>
+        <input type="checkbox" id="check" name="check" value="OK">
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Esborrar">
+    </form>
+    <p id="errorField"></p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+#titol{
+    text-transform: uppercase;
+    font-size: 4.2em;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+p{
+    font-size: 1.4em;
+}
+
+#app{
+    font-style: italic;
+    color:darkgreen;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#imp {
+    text-decoration: underline dashed;
+    color:red;
+}
+
+#tipo{
+    font-family: 'Bitcount Grid Double', 'Verdana', sans-serif;
+    font-size: 1.6em;
+}
+
+#llegi{
+    letter-spacing: 0.3ex;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+}
+
+#estru{
+    text-decoration: overline;
+    word-spacing: 0.9ex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:darkblue;
+}
+
+#cohe{
+    text-decoration: underline;
+    color:indigo;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold;
+}

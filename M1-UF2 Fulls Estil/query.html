@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border:2px solid black;
+        }
+
+        .container {
+        display: grid; 
+        grid-template-columns: 3fr 3fr;
+        grid-template-rows: 1fr 1.8fr 1.5fr 1.5fr 1.5fr; 
+        gap: 5px 5px; 
+        grid-template-areas: 
+            "head head"
+            "main main"
+            "art1 art2"
+            "art3 p1"
+            "p2 p3"; 
+        }
+        .icon
+        {display: none;}
+
+        @media (min-width: 600px)
+        { 
+        .container {
+        display: grid; 
+        grid-template-columns: 2.6fr 2.6fr 2.6fr; 
+        grid-template-rows: 1fr 1.8fr 1.8fr 1fr; 
+        gap: 5px 5px; 
+        grid-template-areas: 
+            "head head icon"
+            "main main main"
+            "art1 art2 art3"
+            "p1 p2 p3"; 
+        }
+        .icon
+        {display:block;}
+
+        }
+        @media (min-width: 1024px)
+        { 
+        .container {
+        display: grid; 
+        grid-template-columns: 2.6fr 2.6fr 2.6fr; 
+        grid-template-rows: 1fr 1.8fr 1.8fr 1.5fr; 
+        gap: 5px 5px; 
+        grid-template-areas: 
+            "head head icon"
+            "main main main"
+            "art1 art2 art3"
+            "p1 p2 p3"; 
+        }
+        .icon
+        {display:block;}
+        }
+        .icon { grid-area: icon; }
+        .main { grid-area: main; height:200px; }
+        .art1 { grid-area: art1; }
+        .art2 { grid-area: art2; }
+        .art3 { grid-area: art3; }
+        .p1 { grid-area: p1; }
+        .p2 { grid-area: p2; }
+        .p3 { grid-area: p3; }
+        .head { grid-area: head; }
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <div class="head">head</div>
+    <div class="icon">icon</div>
+    <div class="main">main</div>
+    <div class="art1">art1</div>
+    <div class="art2">art2</div>
+    <div class="art3">art3</div>
+    <div class="p1">p1</div>
+    <div class="p2">p2</div>
+    <div class="p3">p3</div>
+</div>
+</body>
+</html>

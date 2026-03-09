@@ -1,0 +1,33 @@
+@keyframes drive {
+  from { transform: translateX(0px); }
+  to   { transform: translateX(1000px); }
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  padding: 40px;
+}
+
+.nota {
+  margin-top: 16px;
+  color: #444;
+}
+
+/* Cotxe */
+.car {
+  font-size: 64px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: drive 8s linear 0.2s infinite alternate;
+  animation-play-state: paused;
+}
+
+.car:hover{
+  animation-play-state: running;
+}
+
+.car:active{
+  animation-play-state: running;
+  animation-duration: 3s;
+}

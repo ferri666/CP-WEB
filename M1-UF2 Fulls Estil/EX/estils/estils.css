@@ -1,0 +1,51 @@
+@font-face {
+  font-family: myFont; /* set name */
+  src: url(PetscopWide.ttf); /* url of the font */
+}
+
+body
+{
+    background-color: black;
+    color:white;
+    padding:10px;
+    font-family: myFont;
+}
+
+h1{
+    font-size: 50px;
+    margin-left: 20px;
+    color:#333;
+    text-decoration: underline;
+}
+
+img{
+    width:400px;
+}
+
+a{
+    text-decoration: none;
+    font-size:19px;
+    font-family: sans-serif;
+}
+
+li
+{
+    list-style-type: square;
+}
+
+p{
+    text-align: justify;
+    font-size: 22px;
+    line-height: 1.5em;
+    margin: 20px;
+}
+
+
+div{
+    text-align: center;
+    background-color: #7b7d38;
+    width: 400px;
+    height: 160px;
+    margin-left: 30px;
+    color:rgb(29, 30, 27);
+}

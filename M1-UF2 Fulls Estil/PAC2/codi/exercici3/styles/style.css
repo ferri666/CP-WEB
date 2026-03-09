@@ -1,0 +1,27 @@
+.quadrat{
+    border:2px solid black;
+    width:200px;
+    height: 200px;
+    position: absolute;
+}
+
+.vermell{
+    background-color: red;
+    top:50px;
+    left:50px;
+    z-index: 1;
+}
+
+.verd{
+    background-color: green;
+    top:200px;
+    left: 200px;
+    z-index: 3;
+}
+
+.blau{
+    background-color: blue;
+    top:125px;
+    left: 125px;
+    z-index: 2;
+}

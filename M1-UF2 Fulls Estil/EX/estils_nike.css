@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&display=swap');
+
+body
+{
+    background-color: rgb(11, 12, 12);
+    color:white;
+    font-family: sans-serif;
+}
+
+h1{
+    font-family: 'Permanent Marker';
+    font-weight: lighter;
+}
+
+h2, #vamba, li
+{
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h2
+{
+    text-align: center;
+}
+
+li
+{
+    background-color: #b46892;
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+li:hover
+{
+    color: #b46892;
+    background-color: aqua;
+}
+
+ul
+{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#banner
+{
+    width:100%;
+}
+
+#bamba
+{
+    width:50%;
+}

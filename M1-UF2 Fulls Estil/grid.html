@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {  
+            width:1000px;
+            height:700px;
+            display: grid;
+            grid-template-columns: 2fr 3fr 3fr;
+            grid-template-rows: 1fr 2fr 2fr 1fr;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "header header header"
+                "nav section section"
+                "nav article1 article2"
+                "footer footer footer";
+        }
+
+        .header { grid-area: header; background: red; }
+
+        .nav { grid-area: nav; background: aqua; }
+
+        .section { grid-area: section; background: orange; }
+
+        .article1 { grid-area: article1; background: greenyellow;}
+
+        .article2 { grid-area: article2; background: brown;}
+
+        .footer { grid-area: footer; background: lavender;}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="nav">nav</div>
+        <div class="section">section</div>
+        <div class="article1">article1</div>
+        <div class="article2">article2</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>

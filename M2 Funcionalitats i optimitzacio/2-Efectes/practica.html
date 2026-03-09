@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{box-sizing: border-box;}    
+
+        body{
+            background-image: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(47, 38, 86, 1) 86%, rgba(63, 42, 140, 1) 100%);
+            background-attachment: fixed;
+            overflow: visible;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color:white;
+            padding: 10px;
+        }
+
+        #neon{
+            color:aqua;
+            text-shadow: 0 0 5px #18e4ff, 0 0 30px #18e4ff, 0 0 40px #18e4ff;
+            line-height: 1;
+            animation: shadows 2s infinite;
+        }
+        @keyframes shadows {
+            0% {text-shadow: 0 0 5px #18e4ff, 0 0 30px #18e4ff, 0 0 40px #18e4ff;}
+            50%{text-shadow: 0 0 5px #18e4ff, 0 0 40px #18e4ff, 0 0 60px #18e4ff;}
+            100%{text-shadow: 0 0 5px #18e4ff, 0 0 30px #18e4ff, 0 0 40px #18e4ff;}
+        }
+        #header{
+            text-align: center;
+            justify-items: center;
+            line-height: 1.3;
+        }
+
+        .rodo{
+            border-radius: 10%;
+            padding:5px;
+            border:1px solid white;
+        }
+
+        .pasti
+        {
+            border-radius: 15px;
+            padding:8px;
+            border:1px solid rgb(162, 162, 162);
+            background-color: rgb(57, 45, 77)
+        }
+
+        #tarjetes{
+            display:flex;
+            max-width:1400px;
+            padding:0px;
+            height:420px;
+            margin: 0 auto;
+        }
+
+        .tarjeta{
+            flex-basis: 500px;
+            height:400px;
+            overflow: hidden;
+            font-size: 1em;
+            margin: 0px 20px;
+            padding:0px;
+            animation: entrada .7s;
+        }
+
+        .tarjeta:hover{
+            transform:translateY(-10px)
+        }
+
+        .grad{
+            width:450px;
+            height:60%;
+            filter:grayscale(100%);
+            transform: scale(100%);
+            background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(47, 38, 86, 1) 50%, rgb(255, 0, 0) 100%);
+            transition: filter 0.7s ease;
+            transition: transform 0.7s ease;
+        }
+        .grad:hover
+        {
+            filter:grayscale(0%);
+            transform: scale(110%);
+        }
+        #grad2{
+            width:450px;
+            height:50%;
+            background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(47, 38, 86, 1)50%, rgb(255, 0, 0) 100%);
+        }
+
+        #grad3{
+            width:450px;
+            height:50%;
+            background: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(47, 38, 86, 1) 50%, rgb(255, 0, 0) 100%);
+        }
+
+        .text{
+            padding:15px;
+        }
+        h3{
+            margin-top: 0px;
+        }
+        #icon{
+            width:200px;
+        }
+        #btn-buy{
+            width:250px;
+            background: #170496;
+            color:black;
+            padding:10px;
+            background: linear-gradient(90deg, #21aff6 0% , rgba(237, 83, 191, 1) 60%, rgb(208, 4, 86) 100%);
+            cursor:pointer;
+            transition: transform .3s ease;
+        }
+
+        #btn-buy:hover{
+            transform: translateY(-5px);
+        }
+        #tarj-title
+        {
+            margin-left:90px;
+            margin-bottom: 0px;
+            font-size: larger;
+        }
+        #title{
+            margin-bottom: 0px;
+            font-size: 3em;
+            letter-spacing: 0.1em;
+        }
+        footer{
+            width:850px;
+            text-align: center;
+            margin:0 auto;
+        }
+        .light{
+            position:fixed;
+            border-radius: 50%;
+            top:-250px;
+            left:-250px;
+            width:200px;
+            height:200px;
+            box-shadow: 150px 150px 900px red;
+        }
+
+        #llum2
+        {
+            top:110%;
+            left:99%;
+            width:300px;
+            height:300px;
+            box-shadow: -150px -150px 800px blue;
+        }
+
+        @keyframes entrada {
+            0% {transform:translateY(600px)}
+            100% {transform:translateY(0px)}
+        }
+
+        .delay-1{animation-delay: .1s;}
+        .delay-2{animation-delay: .2s;}
+        .delay-3{animation-delay: .3s;}
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="icon" class="pasti">🎬 FESTIVAL DIGITAL</div>
+        <h1 id="title">DIGITAL <span id="neon">INSPALAMOS</span></h1>
+        <p>El futur ja es aquí: <span id="motiv" class="pasti">IA, VR i Metavers</span></p>
+        <br>
+        <div id="btn-buy" class="pasti"><b>Compra la teva entrada</b></div>
+    </div>
+    <div id="tarj-title"><h3>Programa Destacat</h3></div>
+    <div id="tarjetes">
+        <figure class="tarjeta delay-1 rodo">
+            <div class="grad"></div>
+            <div class="text"><h3>IA & Creativitat</h3>Explora com la IA accelera idees, disseny i música. Taller pràctic i demo en directe.<br><br><span class="pasti"><b>Workshop</b></span></div>
+        </figure>
+        <figure class="tarjeta delay-2 rodo">
+            <div class="grad"></div>
+            <div class="text"><h3>Realitat Virtual</h3>Experiències immersives amb filtres, llum i entorns 3D. Prova dispositius i apps.<br><br><span class="pasti"><b>Immersió</b></span></div>
+        </figure>
+        <figure class="tarjeta delay-3 rodo">
+            <div class="grad"></div>
+            <div class="text"><h3>Metavers Live</h3>Escenaris digitals i avatars. Construïm una mini-experiència interactiva sense JS.<br><br><span class="pasti"><b>Showcase</b></span></div>
+        </figure>
+    </div>
+    <footer class="pasti">Objectiu tècnic: text-shadow, box-shadow, filter, transform, transition i animation amb @keyframes</footer>
+    <div id="llum1" class="light"></div>
+    <div id="llum2" class="light"></div>
+</body>
+</html>

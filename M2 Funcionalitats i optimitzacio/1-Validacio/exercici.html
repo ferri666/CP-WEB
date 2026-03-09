@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    
+        function validarNom() {
+            let nom = document.getElementById("nom").value;
+            let error = document.getElementById("errorNom");
+
+            if (nom === "") {
+                error.textContent = "El nom és obligatori";
+            } else {
+                error.textContent = "";
+            }
+        }
+
+        function validarEmail() {
+        let email = document.getElementById("email").value;
+        let error = document.getElementById("errorEmail");
+        let patro = /^[\w]+@[\w]+\.[\w]{2,3}$/;
+
+        if (!patro.test(email)) {
+            error.textContent = "Format de correu incorrecte";
+        } else {
+            error.textContent = "";
+        }
+        }
+
+        function comptarCaracters(){
+            let coment = document.getElementById("comentari").value
+            let llarg = coment.length
+            let compt = document.getElementById("comptador")
+            
+            if (llarg>100)
+                compt.style = "color: red; font-weight:bold"
+            else
+                compt.style = "color: black;"
+            
+            compt.textContent = llarg + " caràcters"
+            }
+    
+    </script>
+</head>
+<body>
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" onblur="validarNom()">
+    <p id="errorNom" style="color:red;"></p>
+    <label for="email">Correu electrònic:</label>
+    <input type="email" id="email" onchange="validarEmail()">
+    <p id="errorEmail" style="color:red;"></p>
+    <label for="comentari">Comentari:</label>
+    <textarea id="comentari" oninput="comptarCaracters()"></textarea>
+    <p id="comptador">0 caràcters</p>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .galeria{
+            width:100%;
+            display: flex;
+            justify-content: center;
+            gap:0px;
+            margin:0px;
+            padding:0px;
+            border-radius: 10px;
+        }
+        img{
+            width:300px;
+            height:200px;
+            margin:0px;
+            border-radius: 10px;
+            filter:grayscale(100%);
+            transition: filter 1s ease;
+            transition: transform 1s ease;
+        }
+        figure{
+            padding:8px;
+            margin:0px;
+        }
+        img:hover{
+            transform: scale(105%);
+            filter:grayscale(0%) brightness(111%) drop-shadow(0px 0px 10px gray);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galeria">
+        <figure>
+            <img id="crop" src="1.jpg">
+        </figure>
+        <figure>
+            <img id="zoom" src="2.jpg">
+        </figure>
+        <figure>
+            <img id="text" src="playa.jfif">
+        </figure>
+        <figure>
+            <img id="crop" src="1.jpg">
+        </figure>
+    </div>
+</body>
+</html>

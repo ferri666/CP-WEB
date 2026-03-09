@@ -1,0 +1,68 @@
+body{
+    display:flex;
+    justify-content: center;
+}
+
+.bomb {
+    font-size:60px;
+    border: 2px solid black;
+    border-radius: 50%;
+    width:130px;
+    height:130px;
+    float:left;
+    margin:30px;
+    transition: box-shadow 1.4s;
+    transition: transform 0.6s ease-in;
+}
+
+.bomb:hover
+{
+    background-color: blanchedalmond;
+    box-shadow: 0px 0px 20px gold;
+    cursor:pointer;
+}
+
+.bomb:focus
+{
+    outline: 3px solid blue;
+    outline-offset: 6px;
+    background-color: blanchedalmond;
+    transform:rotate(180deg);
+}
+
+.bomb:active
+{
+    background-color: blanchedalmond;
+    transform: scale(0.9);
+    transition: transform 0s ease-in;
+}
+
+.box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top:400px;
+    left:200px;
+    background: steelblue;
+    border: 2px solid black;
+    transition: transform 0.4s ease-in;
+}
+
+#dos
+{
+    top:400px;
+    left:500px;
+    transition: transform 0.4s ease-out;
+}
+
+#tres
+{
+    top:400px;
+    left:800px;
+    transition: transform 0.4s ease-in-out;
+}
+
+ 
+.box:hover {
+  transform: scale(1.2);
+}

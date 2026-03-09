@@ -1,0 +1,49 @@
+#container
+{
+    width: 900px;
+    margin: 0 auto;
+}
+
+header{
+    width:100%;
+    height:100px;
+    background-color: blue;
+}
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: lightgreen;
+    clear:both;
+}
+
+nav{
+    width:200px;
+    height: 500px;
+    float:left;
+    background-color: pink;
+}
+section{
+    width:700px;
+    height:50%;
+    background-color: coral;
+}
+
+#right{
+    float:right;
+    height:500px;
+}
+
+#article1{
+    background-color: green;
+    float:left;
+    width:50%;
+    height:50%;
+}
+
+#article2{
+    background-color: blueviolet;
+    float:right;
+    width:50%;
+    height:50%;
+}

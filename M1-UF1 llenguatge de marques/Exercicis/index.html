@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title> </title>
+		<script></script>
+	</head>
+	<body>
+		<form>
+			<h1>MEWGENICS FORM 🐾</h1>
+				<fieldset>
+					<legend><h2>Personal Information</h2></legend>
+					<table>
+						<tr><td>Name:</td><td><input name="fullname" type="text" size="30" maxlength="50"></td></tr>
+						<tr><td>Password:</td><td><input name="password" type="password" size="20" maxlength="20"></td></tr>
+						<tr><td>Birth Date:</td><td><input name="birth" type="date"></td></tr>
+						<tr><td>User Image</td><td><input id="usrimg" type="file"></td></tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend><h2>Mewgenics Information</h2></legend>
+					<table>
+						<tr><td>Number of cats in your house:</td><td><input type="number" min="0" max="40"></td></tr>
+						<tr><td>What topics you want to talk about?</td><td><input type="checkbox" name="breed">Breeding <input type="checkbox" name="adv">Adventures <input type="checkbox" name="secret">Secrets</td><tr>
+						<tr><td>Favorite class</td><td><select name="class" size="1">
+							<option value="FI">Fighter</option>
+							<option value="MA">Mage</option>
+							<option value="TA">Tank</option>
+							<option value="HU">Hunter</option>
+							<option value="CL">Cleric</option>
+							<option value="TH">Thief</option>
+							<option value="NE">Necromancer</option>
+							<option value="DR">Druid</option>
+							<option value="BU">Butcher</option>
+							<option value="EN">Engenieer</option>
+							<option value="PS">Psychic</option>
+							<option value="MO">Monk</option>
+							<option value="JE">Jester</option>
+							</select></td></tr>
+						<tr><td>What Act are you on now?</td><td><input type="radio" name="act" checked value="1">Act 1 <input type="radio" name="act" value="2">Act 2 <input type="radio" name="act" value="3">Act 3</td></tr>
+						<tr><td>Whats the craziest history that happened during a run?</td><td><textarea name="story" rows="6" cols="50" value=" "></textarea></td></tr>
+						</table>
+				</fieldset>
+				<p><button name="sb" value="sbData" type="submit">Submit</button> <button name="res" type="reset">Reset</button></p>
+			</table>
+		</form>
+	</body>
+</html>

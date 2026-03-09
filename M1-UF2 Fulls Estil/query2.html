@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border:2px solid black;
+        }
+        .container {
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1.4fr 1.4fr 1.4fr 1.4fr; 
+            gap: 5px 5px; 
+            grid-template-areas: 
+                "head head head head head head"
+                "nav nav nav nav nav nav"
+                "main main main main main main"
+                "art1 art1 art1 art1 art1 art1"
+                "art2 art2 art2 art2 art2 art2"
+                "art3 art3 art3 art3 art3 art3"
+                "p1 p1 p1 p1 p1 p1"
+                "p2 p2 p2 p2 p2 p2"
+                "p3 p3 p3 p3 p3 p3"
+                "p4 p4 p4 p4 p4 p4"; 
+            }
+
+        @media (min-width: 600px)
+        { 
+            .container {
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 2fr 1fr 1fr 1fr 1.4fr 1.4fr; 
+            gap: 5px 5px; 
+            grid-template-areas: 
+                "head head head head head head head head head head head head"
+                "nav nav nav nav nav nav nav nav nav nav nav nav"
+                "main main main main main main main main main main main main"
+                "art1 art1 art1 art1 art1 art1 art1 art1 art1 art1 art1 art1"
+                "art2 art2 art2 art2 art2 art2 art2 art2 art2 art2 art2 art2"
+                "art3 art3 art3 art3 art3 art3 art3 art3 art3 art3 art3 art3"
+                "p1 p1 p1 p1 p1 p1 p2 p2 p2 p2 p2 p2"
+                "p3 p3 p3 p3 p3 p3 p4 p4 p4 p4 p4 p4"; 
+            }
+        }
+        @media (min-width: 1024px)
+        { 
+            .container 
+            {
+                display: grid; 
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+                grid-template-rows: 1fr 1.8fr 1.8fr 1.5fr; 
+                gap: 5px 5px; 
+                grid-template-areas: 
+                    "head head head head head head nav nav nav nav nav nav"
+                    "main main main main main main main main main main main main"
+                    "art1 art1 art1 art1 art2 art2 art2 art2 art3 art3 art3 art3"
+                    "p1 p1 p1 p2 p2 p2 p3 p3 p3 p4 p4 p4"; 
+            }
+        }
+        .main { grid-area: main; height:200px; background-color: orange; }
+        .art1 { grid-area: art1; background-color: greenyellow;}
+        .art2 { grid-area: art2; background-color: greenyellow;}
+        .art3 { grid-area: art3; background-color: greenyellow; }
+        .p1 { grid-area: p1; background-color: red;}
+        .p2 { grid-area: p2; background-color: red;}
+        .p3 { grid-area: p3;  background-color: red;}
+        .p4 { grid-area: p4;  background-color: red;}
+        .head { grid-area: head; background-color: blue;}
+        .navi { grid-area: nav; background-color: blue;}
+
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <div class="head">head</div>
+    <div class="navi">nav</div>
+    <div class="main">main</div>
+    <div class="art1">art1</div>
+    <div class="art2">art2</div>
+    <div class="art3">art3</div>
+    <div class="p1">p1</div>
+    <div class="p2">p2</div>
+    <div class="p3">p3</div>
+    <div class="p4">p4</div>
+</div>
+</div>
+</body>
+</html>

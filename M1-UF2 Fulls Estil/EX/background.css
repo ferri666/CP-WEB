@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+main{
+    background-color:hsl(38 2.9% 84%);
+    color: rgb(47, 44, 39);
+    text-align: center;
+}
+
+h1
+{
+    font-family: "Lobster", sans-serif;
+}
+
+p
+{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#banner
+{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTspAJUtDrfPlVYuJUr0TPx25stfDiIy5ek9UvPqHwNz-huAZIPhpom79s2ghWF6ruzwt29jG4svQv_WOzsHx--d14vaObfsRB44vdN-g&s=10');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 460px;
+    height: 215px;
+    padding-left: 55%;
+}
+
+body
+{
+    background: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwNzQtMDhhLWt2a2N6ZG4xLmpwZw.jpg") fixed;
+}

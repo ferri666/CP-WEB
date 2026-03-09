@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .quadrat{
+            width:200px;
+            height:200px;
+            position:absolute;
+            color:white;
+            padding:9px;
+            justify-content: center;
+            align-items: end;
+            display: flex;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .petit{
+            width:69px;
+            height:69px;
+        }
+        #verd{
+            background-color: lightgreen;
+            z-index: 3;
+            top:170px;
+            left:90px;
+        }
+        #groc{
+            background-color: yellow;
+            z-index: 4;
+            top:240px;
+            left:110px;
+        }
+        #blau{
+            background-color: blue;
+            z-index: 2;
+            top:150px;
+            left:50px;
+        }
+        #vermell{
+            background-color: red;
+            z-index: 1;
+            top:300px;
+            left:100px;
+        }
+        #lila{
+            background-color: purple;
+            z-index: 5;
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="verd" class="quadrat petit"></div>
+    <div id="vermell" class="quadrat"></div>
+    <div id="blau" class="quadrat"></div>
+    <div id="groc" class="quadrat petit"></div>
+    <div id="lila" class="quadrat"></div>
+</body>
+</html>

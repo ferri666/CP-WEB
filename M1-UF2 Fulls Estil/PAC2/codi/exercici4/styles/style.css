@@ -1,0 +1,22 @@
+.flex-container{
+    height:300px;
+    background-color: violet;
+    display:flex;
+    justify-content: center;
+    gap:30px;
+    align-items: center;
+}
+
+.flex-container > div
+{
+    width:200px;
+    height: 300px;
+    background-color: orange;
+    border-radius: 12px;
+    border: 2px solid darkblue;
+}
+
+#b{
+    width:400px;
+    height: 200px;
+}

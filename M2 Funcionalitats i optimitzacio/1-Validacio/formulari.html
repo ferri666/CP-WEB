@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend><h1>Primer Formulari</h1></legend>
+            <label for="username">Nom:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="pwd">Contrasenya:</label>
+            <input type="password" id="pwd" name="pwd"><br><br>
+            <label for="age">
+                Edat:
+            </label>
+            <input type="number" id="age" name="age"><br><br>
+            <label for="dob">
+                Data Naixement:
+            </label>
+            <input type="date" id="dob" name="dob"><br><br>
+            <label for="color">
+                Color preferit:
+            </label>
+            <input type="color" id="color" name="color"><br><br>
+            <label for="mail">Correu electronic:</label>
+            <input type="email" id="mail" name="mail" oninput="maxlen(this)"><br><br>
+            <label for="sex">Sexe</label><br>
+                Home<input type="radio" value="men" id="sex" name="sex">
+                Dona<input type="radio" value="wom" id="sex" name="sex">
+                No-Binari<input type="radio" value="nonb" id="sex" name="sex"><br><br>
+            <label for="aficions">Aficions</label><br>
+                Magic<input type="checkbox" value="mag" id="aficions" name="aficions">
+                Videojocs<input type="checkbox" value="vid" id="aficions" name="aficions">
+                Programació<input type="checkbox" value="pro" id="aficions" name="aficions"><br><br>
+            <label for="city">Ciutat</label>
+            <select id="city" name="city">
+                <option></option>
+                <option value="bcn">Barcelona</option>
+                <option value="gir">Girona</option>
+                <option value="sfg">Sant Feliu de Guíxols</option>
+                <option value="plm">Palamós</option>
+                <option value="plg">Palafrugell</option>
+                <option value="pjd">Platja D'aro</option>
+            </select><br><br>
+            <input type="submit" onclick="validacio()" value="OK">
+            <input type="reset" value="Borra">
+        </fieldset>
+    </form>
+</body>
+</html>
