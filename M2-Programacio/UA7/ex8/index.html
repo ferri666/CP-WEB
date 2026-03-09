@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:5px;
+        flex-direction: column;
+    }
+    .llum{
+        width:120px;
+        height:120px;
+        border-radius: 50%;
+        filter:brightness(79%);
+    }
+
+    .ences{
+        filter:brightness(120%);
+    }
+    #red{
+        background-color: red;
+        box-shadow: 0px 0px 20px red;
+    }
+    #orange{
+        background-color: orange;
+    }
+    #green
+    {
+        background-color: green;
+    }
+    </style>
+</head>
+<body>
+    <div id="red" class="llum ences"></div>
+    <div id="orange" class="llum"></div>
+    <div id="green" class="llum"></div>
+    <script src="ex8.js"></script>
+</body>
+</html>

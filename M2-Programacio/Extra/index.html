@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 250px;
+            margin: 10px;
+        }
+        </style>
+</head>
+<body>
+    <button id="btn-new">New card</button>
+    <div id="cont"></div>
+    <script>
+        const btn = document.getElementById("btn-new")
+        const div = document.getElementById("cont")
+        btn.addEventListener("click", function(){
+            let num = Math.floor(Math.random()*500)
+            fetch("https://api.magicthegathering.io/v1/cards?contains=imageUrl&page="+num)
+            .then(function(res) {
+            return res.json();
+            })
+            .then(function(data) {
+                let e = Math.floor(Math.random()*100)
+                const img = document.createElement("img")
+                console.log(num, data["cards"][e])
+                img.src = data["cards"][e]["imageUrl"]
+                img.alt = data["cards"][e]["name"]
+                div.appendChild(img)
+            }
+            ) .catch(function(error) {
+                console.error("Alguna cosa ha anat malament: " + error);
+            });
+        })
+    </script>
+</body>
+</html>

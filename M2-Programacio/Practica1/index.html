@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nom = prompt("Digues el teu Nom:")
+        let cognom = prompt("Digues el teu Cognom:")
+        console.log("Benvingut al curs, "+nom +" "+cognom)
+        let any = Number(prompt("Digues el teu any de naixement:"))
+        const actual = new Date().getFullYear()
+        let edat = actual -any
+        console.log("Si vas néixer el "+any+", aquest any faràs (o has fet) " + edat +" anys.")
+        let preu = 10
+        let unitats = Number(prompt("Quantes unitats vols?"))
+        console.log("---TIQUET DE COMPRA---\n Producte: " + preu + "€\nUnitats: " + unitats +"\nTOTAL A PAGAR: "+preu*unitats+"€")
+    </script>
+</body>
+</html>

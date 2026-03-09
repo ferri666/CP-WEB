@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercicis</title>
+    <style>
+      .caixa{
+        width:200px;
+        height:200px;
+        background-color: white;
+        border:3px solid black;
+        margin:auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="caixa"></div>
+    <p id="text"></p>
+    <script>
+      let interval = setInterval(changecolor, 69)
+  
+      function changecolor()
+      {
+        let caixa = document.querySelector(".caixa");
+          caixa.style.backgroundColor = "rgb("+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+","+Math.floor(Math.random()*256)+")"
+      };
+
+      let   box = document.querySelector(".caixa");
+      box.addEventListener("mouseover", function(){
+        clearInterval(interval)
+      })
+
+      box.addEventListener("mouseout", function(){
+        interval = setInterval(changecolor, 69)
+      })
+
+      
+    </script>
+  </body>
+</html>
