@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal{
+        display:none;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgba(0,0,0,0.5);
+        }
+
+        .modal-contingut{
+        background:white;
+        width:300px;
+        margin:15% auto;
+        padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="obrirModal()">Obrir modal</button>
+    <div id="modal" class="modal">
+    <div class="modal-contingut">
+        <h2>Informació</h2>
+        <p>Aquesta és una finestra modal.</p>
+        <button onclick="tancarModal()">Tancar</button>
+    </div>
+    <script>
+        function obrirModal(){
+        document.getElementById("modal").style.display="block";
+        }
+
+        function tancarModal(){
+        document.getElementById("modal").style.display="none";
+        }
+    </script>
+</div>
+</body>
+</html>

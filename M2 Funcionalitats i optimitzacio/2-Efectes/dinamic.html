@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+        display: none;
+        margin-top:10px;
+        padding:10px;
+        background:lightgray;
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        }
+        #info{
+            z-index: 3;
+        }
+        #des{
+            z-index: 4;
+            margin-left: 5px;
+            margin-top:15px;
+        }
+        #opt{
+            z-index: 5;
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        button{background: lightgray;}
+    </style>
+</head>
+<body>
+    <button id="btn-info" onclick="toggleInfo()">Mostrar informació</button>
+    <div id="info" class="text">
+    <p>Aquest text apareix o desapareix.</p>
+    </div>
+    <button id="btn-des" onclick="toggleDescr()">Mostrar descripció</button>
+    <div id="des" class="text">
+    <p>Aquest text apareix o desapareix.</p>
+    </div>
+    <button id="btn-opt" onclick="toggleOpt()">Mostrar opcions</button>
+    <div id="opt" class="text">
+    <p>Aquest text apareix o desapareix.</p>
+    </div>
+
+
+
+    <script>
+        function toggleInfo(){
+            var element=document.getElementById("info");
+            var btn = document.getElementById("btn-info")
+            if(element.style.display==="block"){
+                element.style.display="none";
+                btn.style.background="lightgray";
+            }else{
+                element.style.display="block";
+                btn.style.background="blue";
+            }
+        }
+        function toggleDescr(){
+            var element=document.getElementById("des");
+            var btn = document.getElementById("btn-des")
+            if(element.style.display==="block"){
+                element.style.display="none";
+                btn.style.background="lightgray";
+            }else{
+                element.style.display="block";
+                btn.style.background="blue";
+            }
+        }
+        function toggleOpt(){
+            var element=document.getElementById("opt");
+            var btn = document.getElementById("btn-opt")
+            if(element.style.display==="block"){
+                element.style.display="none";
+                btn.style.background="lightgray";
+            }else{
+                element.style.display="block";
+                btn.style.background="blue";
+            }
+        }
+    </script>
+</body>
+</html>
