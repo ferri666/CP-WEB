@@ -8,21 +8,28 @@
     background: linear-gradient(90deg,rgba(46, 21, 77, 1) 0%, rgba(9, 9, 121, 1) 51%, rgba(4, 96, 224, 1) 100%);
     padding: 42px;
     width:400px;
-    height:450px;
+    height:470px;
 }
 
 .card{
     border-radius: 25px;
     margin: 0 auto;
     background-color: white;
-    height:300px;
+    height:360px;
     padding:27px;
     line-height: 2em;
+    overflow: hidden;
 }
 
+img{width:250px;}
 
 .card:hover{
     transform: translateY(-6px);
+}
+
+img:hover{
+    filter:brightness(120%);
+    transform: scale(102%);
 }
 .btn-comm{
     border-radius: 15px;
@@ -35,4 +42,5 @@
 
 .btn-comm:hover{
     background-color: rgb(50, 50, 136);
+    transform: scale(102%);
 }
