@@ -1,0 +1,38 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing:border-box;
+}
+
+.container{
+    background: linear-gradient(90deg,rgba(46, 21, 77, 1) 0%, rgba(9, 9, 121, 1) 51%, rgba(4, 96, 224, 1) 100%);
+    padding: 42px;
+    width:400px;
+    height:450px;
+}
+
+.card{
+    border-radius: 25px;
+    margin: 0 auto;
+    background-color: white;
+    height:300px;
+    padding:27px;
+    line-height: 2em;
+}
+
+
+.card:hover{
+    transform: translateY(-6px);
+}
+.btn-comm{
+    border-radius: 15px;
+    background-color: darkblue;
+    width:100px;
+    color:white;
+    padding:10px;
+    border:0px;
+}
+
+.btn-comm:hover{
+    background-color: rgb(50, 50, 136);
+}
