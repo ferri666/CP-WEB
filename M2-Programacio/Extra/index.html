@@ -12,21 +12,43 @@
         </style>
 </head>
 <body>
+    <input id="cmc" type="number" min="0" max="16" value="2"></input>
     <button id="btn-new">New card</button>
+    <button id="btn-reset">Reset</button>
     <div id="cont"></div>
     <script>
         const btn = document.getElementById("btn-new")
+        const btn2 = document.getElementById("btn-reset")
         const div = document.getElementById("cont")
+        const inp = document.getElementById("cmc")
         btn.addEventListener("click", function(){
-            let num = Math.floor(Math.random()*500)
-            fetch("https://api.magicthegathering.io/v1/cards?contains=imageUrl&page="+num)
+            let cmc = inp.value;
+            if (cmc<9)
+                num = Math.floor(Math.random()*10) + 1
+            else
+                num=1
+            fetch("https://api.magicthegathering.io/v1/cards?contains=imageUrl&types=creature&cmc="+cmc+"&page="+num)
             .then(function(res) {
             return res.json();
             })
             .then(function(data) {
-                let e = Math.floor(Math.random()*100)
+                if (cmc==0)
+                    max=74
+                else if (cmc<10)
+                    max=100
+                else if (cmc==10)
+                    max = 78;
+                else if (cmc==11)
+                    max= 33;
+                else if (cmc==12)
+                    max= 25;
+                else if (cmc==15)
+                    max= 16;
+                else
+                    max=1;
+                let e = Math.floor(Math.random()*max)
+                console.log(num, data["cards"].length, e)
                 const img = document.createElement("img")
-                console.log(num, data["cards"][e])
                 img.src = data["cards"][e]["imageUrl"]
                 img.alt = data["cards"][e]["name"]
                 div.appendChild(img)
@@ -34,6 +56,11 @@
             ) .catch(function(error) {
                 console.error("Alguna cosa ha anat malament: " + error);
             });
+        })
+
+        btn2.addEventListener("click", function(){
+            while(div.firstChild)
+                div.removeChild(div.firstChild)
         })
     </script>
 </body>
