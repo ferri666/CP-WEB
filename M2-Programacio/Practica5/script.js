@@ -57,7 +57,8 @@ setTimeout(function(){
     let start = Date.now()
     btn3.addEventListener("click", function(){
         if (!done)
-       { done = true;
+        {
+        done = true;
         let finish = Date.now()
         let diff = finish - start;
         let misg = document.getElementById("msg");
