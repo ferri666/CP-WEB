@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        *{ 
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        body{background-color: mediumblue;}
+
+        @keyframes mou {
+            0% {transform: translateY(-5px);}
+            100% {transform: translateY(5px);}
+        }
+
+        h2{
+            animation: mou 3s infinite alternate-reverse;
+            filter: drop-shadow(2px 2px 3px black);
+        }
+        #cont{
+            background-color: blue;
+            width:400px;
+            overflow: hidden;
+            border-radius: 20px;
+            margin: 100px auto;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            color:white;
+            transition: transform 0.6s;
+        }
+        img{
+            filter:blur(4px);
+            transition:filter 0.42s;
+        }
+
+        #cont:hover{
+            transform: scale(110%);
+        }
+        #cont:hover img{
+            filter:blur(0px)
+        }
+        #text{
+            padding-left: 20px;
+        }
+
+        #btn-info{
+            background-color:deeppink;
+            border-radius: 15px;
+            padding:15px;
+            text-align: center;
+            width:140px;
+            cursor: pointer;
+        }
+        #btn-info:hover{
+            background-color:rgb(120, 12, 70);
+        }
+        #btn-out{
+            background-color:deeppink;
+            border-radius: 15px;
+            padding:15px;
+            text-align: center;
+            width:90px;
+            cursor: pointer;
+            color:white;
+        }
+        #btn-out:hover{
+            background-color:rgb(120, 12, 70);
+        }
+        h3{color: deeppink;}
+        #info{
+            display: none;
+            position:absolute;
+            background-color: white;
+            height:791px;
+            left:75%;
+            top:0;
+            padding:20px;
+            text-align: justify;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <img src="1.jpg" width="450px"></img>
+        <div id="text">
+        <h2>Festival de Música</h2>
+        <p>Una experiència única amb música en directe, llums, animació i un ambient espectacular.</p>
+        <div id="btn-info">Més informació</div>
+        </div>
+    </div>
+    <div id="info">
+        <h3>Festival de Música</h3>
+        <p><b>Data:</b> 20 de juny</p>
+        <p><b>Lloc:</b> Parc Central</p>
+        <p>Gaudeix d'una nit amb artistes, convidats, zona de menjar, espais de descans i moltes sorpreses.</p>
+        </ul>
+        <div id="btn-out">Tancar</div>
+    </div>
+
+    <script>
+        const info = document.getElementById("info")
+        const btn = document.getElementById("btn-info")
+        btn.addEventListener("click", function(){
+            info.style.display = "block";
+            btn.style.border="3px solid black"
+            btn.style.outline="3px solid white"
+            info.classList.add("animate__animated")
+            info.classList.add("animate__fadeInRight")
+            info.classList.remove("animate__fadeOutRight")
+        })
+        document.getElementById("btn-out").addEventListener("click", function(){
+            info.classList.add("animate__animated")
+            info.classList.add("animate__fadeOutRight")
+            btn.style.border="0px"
+            btn.style.outline="0px"
+            info.classList.remove("animate__fadeInRight")
+            setTimeout(function(){
+                info.style.display = "none";
+            }, 1000)
+            
+        })
+    </script>
+</body>
+</html>
