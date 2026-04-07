@@ -1,0 +1,54 @@
+body{
+            background-color: midnightblue;
+            color:white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        form
+        {
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form div{
+            background-color: rgb(11, 11, 48);
+            width:600px;
+            padding:20px;
+            border-radius: 7px;
+            text-align: left;
+        }
+        label{
+            margin:20px;
+        }
+
+        input:checked + label
+        {
+            color:grey;
+            text-decoration: line-through;
+        }
+
+        #ntask{
+            margin:20px;
+            background-color: rgb(69, 69, 108);
+            width:500px;
+            height:30px;
+            padding:16px;
+            color:rgb(208, 206, 206);
+            border-radius: 25px;
+            border:0px;
+            font-size: 16px;
+        }
+        #btn-new
+        {
+            border: 0px;
+            border-radius: 20px;
+            background: linear-gradient(264deg,rgba(90, 34, 195, 1) 0%, rgba(45, 215, 253, 1) 100%);
+            color:white;
+            font-weight: bolder;
+            padding:15px;
+            cursor: pointer;
+        }
