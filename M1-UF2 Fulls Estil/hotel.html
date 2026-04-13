@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Katamary</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+    <div class="cont">
+    <form class="form-cont">
+        <fieldset>
+            <legend><h1>Reserva</h1></legend>
+            <label for="type">Tipus de reserva: </label>
+            <select name="type" id="type">
+                <option value="unic">Habitació Única</option>
+                <option value="doble">Habitació Doble</option>
+                <option value="triple">Habitació Triple</option>
+                <option value="deluxe">Habitació Deluxe</option>
+            </select></br>
+            <label for="num">Número de persones: </label>
+            <input name="num" id="num" type="number" min="1" max="10" value="1"></br>
+            <label for="rooms">Número d'habitacions:</label>
+            <input type="range" id="rooms" name="rooms" min="1" max="10" value="1"> <span id="valueRooms">1</span></br>
+            <label for="name">Nom: *</label>
+            <input type="text" name="name" id="name" required></br>
+            <label for="mail">Correu: *</label>
+            <input type="text" name="mail" id="mail" required></br>
+            <label for="birth">Data de Naixement</label>
+            <input type="date" name="birth" id="birth"><br>
+            <label for="phone">Teléfon: *</label>
+            <input type="text" id="phone" name="phone" pattern="(+[0-9]{2-3})?[0-9]{9}"required></br>
+            <label for="arriv">Data d'arribada: *</label>
+            <input type="date" name="arriv" id="arriv"></br>
+            <label for="depar">Data de sortida: *</label>
+            <input type="date" name="depar" id="depar"></br>
+            <label for="color">Color preferit: </label>
+            <input type="color" name="color" id="color"></br>
+            <label for="observ">Observacions: </label></br>
+            <textarea name="obser" type="observ" placeholder="..."></textarea><br>
+            <input type="submit" value="Enviar">
+            <input type="reset" onclick="resetRooms()" value="Reset">
+        </fieldset>
+    </form>
+    </div>
+    <script>
+        const slider=document.getElementById("rooms")
+        const val = document.getElementById("valueRooms")
+
+        slider.addEventListener("input", ()=> {
+            val.textContent = slider.value;
+        })
+        function resetRooms(){
+            val.textContent = 1
+        }
+    </script>
+</body>
+</html>

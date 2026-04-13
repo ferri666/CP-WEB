@@ -1,0 +1,37 @@
+body{
+    line-height: 2.3em;
+    background: linear-gradient(183deg,rgba(232, 14, 221, 1) 0%, rgba(161, 51, 171, 1) 51%, rgba(113, 33, 156, 1) 100%);
+}
+
+
+.cont{
+    width:1200px;
+    height:775px;
+    margin:0px;
+}
+
+.form-cont{
+    background: white;
+    padding:20px;
+    border-radius: 20px;
+    width:600px;
+    margin: 50px auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+legend{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+input{
+    margin:8px;
+}
+
+option{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+fieldset{
+    border:0px;
+}
