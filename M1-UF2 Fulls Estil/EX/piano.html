@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: greenyellow;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Times New Roman', Times, serif;
+        }
+        .cont-piano{
+            width:1200px;
+            display:flex;
+            margin:0px auto;
+        }
+        h1{
+            text-align: center;
+        }
+        .tecla{
+            margin: 1px;
+            filter:drop-shadow(0px 1px 2px);
+            width:50px;
+            padding:15px;
+            height:200px;
+            display:flex;
+            flex-direction: column; 
+            justify-content: flex-end;
+            align-items: center;
+            border-radius: 0px 0px 10px 10px;
+            background: rgb(246, 242, 237);
+            font-weight: bolder;
+        }
+        .black
+        {
+            background: black;
+            color:white;
+            width:16px;
+            position:absolute;
+            left:220px;
+            height:120px;
+        }
+
+        #dee{left:310px;}
+        #eff{left:472px;}
+        #gee{left:555px;}
+        #eie{left:635px;}
+
+
+    </style>
+</head>
+<body>
+    <h1>Piano</h1>
+    <div class="cont-piano">
+        <div class="tecla">C<div class="btn">A</div></div>
+        <div class="tecla">D<div class="btn">S</div></div>
+        <div class="tecla">E<div class="btn">D</div></div>
+        <div class="tecla">F<div class="btn">F</div></div>
+        <div class="tecla">G<div class="btn">G</div></div>
+        <div class="tecla">A<div class="btn">H</div></div>
+        <div class="tecla">B<div class="btn">J</div></div>
+        <div class="tecla black">C#<div class="btn">W</div></div>
+        <div id="dee" class="tecla black">D#<div class="btn">E</div></div>
+        <div id="eff" class="tecla black">F#<div class="btn">T</div></div>
+        <div id="gee" class="tecla black">G#<div class="btn">Y</div></div>
+        <div id="eie" class="tecla black">A#<div class="btn">U</div></div>
+    </div>
+</body>
+</html>
