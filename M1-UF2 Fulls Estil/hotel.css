@@ -1,6 +1,8 @@
 body{
-    line-height: 2.3em;
+    line-height: 2.5em;
     background: linear-gradient(183deg,rgba(232, 14, 221, 1) 0%, rgba(161, 51, 171, 1) 51%, rgba(113, 33, 156, 1) 100%);
+    color:rgb(69, 69, 69);
+    padding-left:100px;
 }
 
 
@@ -34,4 +36,20 @@ option{
 }
 fieldset{
     border:0px;
+}
+
+.btn{
+    border:1px solid black;
+    border-radius: 17px;
+    padding:9px;
+    background: rgb(255, 255, 255);
+    color: rgb(9, 9, 9);
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    background:blue;
+    color:white;
+    transform: scale(115%) translateY(-4px);
 }
