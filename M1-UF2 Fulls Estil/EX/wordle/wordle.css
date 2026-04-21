@@ -1,0 +1,39 @@
+.word{
+    display:flex;
+    gap:3px;
+    margin:5px;
+}
+
+.lletra{
+    width:70px;
+    height:70px;
+    border: 3px solid grey;
+    border-radius: 60%;
+    color:grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+}
+
+.correcte
+{
+    background:rgb(107, 177, 3);
+    border: 3px solid rgb(107, 177, 3);
+    color:white;
+}
+
+.casi
+{
+    background:orange;
+    border: 3px solid orange;
+    color:white;
+}
+
+.incorrecte
+{
+    background: grey;
+    color:white;
+}

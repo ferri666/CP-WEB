@@ -3,73 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            background: greenyellow;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Times New Roman', Times, serif;
-        }
-        .cont-piano{
-            width:1200px;
-            display:flex;
-            margin:0px auto;
-        }
-        h1{
-            text-align: center;
-        }
-        .tecla{
-            margin: 1px;
-            filter:drop-shadow(0px 1px 1px);
-            width:50px;
-            padding:15px;
-            height:200px;
-            display:flex;
-            flex-direction: column; 
-            justify-content: flex-end;
-            align-items: center;
-            border-radius: 0px 0px 10px 10px;
-            background: rgb(246, 242, 237);
-            font-weight: bolder;
-        }
-
-        .tecla:hover{
-            transform:translateY(5px) scale(104%);
-        }
-
-        .black:hover{
-            transform:scale(104%);
-        }
-        
-
-        .black
-        {
-            background: black;
-            color:white;
-            width:16px;
-            position:absolute;
-            left:220px;
-            height:120px;
-        }
-
-        #dee{left:310px;}
-        #eff{left:472px;}
-        #gee{left:555px;}
-        #eie{left:635px;}
-
-        .btn
-        {
-            background: grey;
-            padding:2px 7px;
-            border-radius: 5px;
-            font-weight: normal;
-            margin-top: 5px;
-        }
-
-        .black .btn
-        {
-            background: black;
-        }
-    </style>
+    <title>Piano</title>
+    <link rel="stylesheet" href="styles/piano.css" >
 </head>
 <body>
     <h1>Piano</h1>
@@ -93,48 +28,14 @@
         <div class="tecla" onclick="tocarNota(8)">G<div class="btn">G</div></div>
         <div class="tecla" onclick="tocarNota(10)">A<div class="btn">H</div></div>
         <div class="tecla" onclick="tocarNota(12)">B<div class="btn">J</div></div>
-        <div class="tecla black" onclick="tocarNota(2)">C#<div class="btn">W</div></div>
-        <div id="dee" class="tecla black" onclick="tocarNota(4)">D#<div class="btn">E</div></div>
-        <div id="eff" class="tecla black" onclick="tocarNota(7)">F#<div class="btn">T</div></div>
-        <div id="gee" class="tecla black" onclick="tocarNota(9)">G#<div class="btn">Y</div></div>
-        <div id="eie" class="tecla black" onclick="tocarNota(11)">A#<div class="btn">U</div></div>
+        <div id="cont2" class="cont-piano">
+            <div class="tecla black" onclick="tocarNota(2)">C#<div class="btn">W</div></div>
+            <div id="dee" class="tecla black" onclick="tocarNota(4)">D#<div class="btn">E</div></div>
+            <div id="eff" class="tecla black" onclick="tocarNota(7)">F#<div class="btn">T</div></div>
+            <div id="gee" class="tecla black" onclick="tocarNota(9)">G#<div class="btn">Y</div></div>
+            <div id="eie" class="tecla black" onclick="tocarNota(11)">A#<div class="btn">U</div></div>
+        </div>
     </div>
-    <script>
-        let nota = null;
-
-        function tocarNota(num)
-        {
-            nota=document.getElementById("nota"+num)
-            nota.play()
-        }
-
-        document.addEventListener("keydown", function(e)
-        {
-            if (e.key=="a")
-                tocarNota(1);
-            else if (e.key=="w")
-                tocarNota(2);
-            else if (e.key=="s")
-                tocarNota(3);
-            else if (e.key=="e")
-                tocarNota(4);
-            else if (e.key=="d")
-                tocarNota(5);
-            else if (e.key=="f")
-                tocarNota(6);
-            else if (e.key=="t")
-                tocarNota(7);
-            else if (e.key=="g")
-                tocarNota(8);
-            else if (e.key=="y")
-                tocarNota(9);
-            else if (e.key=="h")
-                tocarNota(10);
-            else if (e.key=="u")
-                tocarNota(11);
-            else if (e.key=="j")
-                tocarNota(12);
-        })
-    </script>
+    <script src="piano.js"></script>
 </body>
 </html>
