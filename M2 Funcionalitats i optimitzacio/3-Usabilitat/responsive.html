@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pràctica Responsive</title>
+<style>
+    @media (min-width:768px)
+    { 
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      font-size: 2em;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+        }
+        nav a {
+        color: white;
+        text-decoration: none;
+        margin-right: 20px;
+        }
+        main {
+        width: 70%;
+        background-color: #f4f4f4;
+        padding: 20px;
+        }
+        aside {
+        width: 30%;
+        background-color: #ddd;
+        padding: 20px;
+        }
+         img {
+        width: 100%;
+        }
+        footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        }
+    }
+    @media (max-width:728px){
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      font-size: 1.2em;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #555;
+      padding: 10px;
+      display:flex;
+      flex-direction: column;
+      line-height: 1.3em;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
+    main {
+      width: 90%;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    aside {
+      width: 90%;
+      background-color: #ddd;
+      padding: 20px;
+    }
+    img {
+      width: 100%;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>La meva web</h1>
+  </header>
+  <nav>
+    <a href="#">Inici</a>
+    <a href="#">Serveis</a>
+    <a href="#">Projectes</a>
+    <a href="#">Contacte</a>
+  </nav>
+  <div class="container">
+    <main>
+      <h2>Contingut principal</h2>
+      <p>Aquesta és una pàgina de prova per treballar el disseny responsive.</p>
+      <img src="https://via.placeholder.com/600x250" alt="Imatge de mostra">
+    </main>
+    <aside>
+      <h2>Barra lateral</h2>
+      <p>Informació addicional.</p>
+    </aside>
+  </div>
+  <footer>
+    <p>Peu de pàgina</p>
+  </footer>
+</body>
+</html>

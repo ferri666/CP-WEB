@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pràctica DevTools</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+    .container {
+      width: 1200px;
+      margin: auto;
+    }
+    h1 {
+      color: gray;
+      font-size: 12px;
+    }
+    img {
+      width: 800px;
+    }
+    button {
+      background: lightgray;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Benvingut a la meva web</h1>
+  <p>Fes clic al botó:</p>
+  <button onclick="saludar()">Click</button>
+  <img src="https://via.placeholder.com/800x300">
+</div>
+<script>
+function saludar() {
+  alert("Hola")
+  console.log("Click fet")
+}
+</script>
+</body>
+</html>
